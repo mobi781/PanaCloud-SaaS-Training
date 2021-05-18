@@ -43,7 +43,7 @@ jobs:
         run: npm build
           
       - name: install surge
-        run: npm install --global surge
+        run: npm install -g surge
         
       - name: deploy project
         run: surge ./build http://react-appasb.surge.sh/ --token ${{secrets.reactt}}
