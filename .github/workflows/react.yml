@@ -27,7 +27,7 @@ jobs:
 
   
       - name: setup Node.js 
-        run: actions/setup-node@v1.4.2
+        run: actions/setup-node@v2-beta
         with:
           version: 12
 
@@ -38,8 +38,8 @@ jobs:
           cmd: install
           
           
-          
-     - name: yarb build
+         #yarn setup 
+     - name: setup of yarn
         run: yarn build
           
      - name: install surge
