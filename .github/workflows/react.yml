@@ -39,14 +39,14 @@ jobs:
           
           
       # yarn setup 
-      - name: setup of yarn
-         run: yarn build
+      - name: build
+        run: npm run build
           
       - name: install surge
-         run: npm install --global surge
+        run: npm install --global surge
         
       - name: deploy project
-         run: surge ./build http://react-appasb.surge.sh/ --token ${{secrets.reactt}}
+        run: surge ./build http://react-appasb.surge.sh/ --token ${{secrets.reactt}}
 
           
           
