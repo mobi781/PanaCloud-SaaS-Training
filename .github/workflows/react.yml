@@ -40,7 +40,7 @@ jobs:
           
       # yarn setup 
       - name: build
-        run: npm run build
+        run: npm build
           
       - name: install surge
         run: npm install --global surge
