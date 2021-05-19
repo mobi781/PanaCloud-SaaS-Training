@@ -38,4 +38,4 @@ jobs:
         
           # Runs a set of commands using the runners shell
       - name: run surge
-        run: surge ./first_react_app/build updatedReact.surge.sh --token ${{ secrets.chakko }}
+        run: surge ./ updatedReact.surge.sh --token ${{ secrets.chakko }}
