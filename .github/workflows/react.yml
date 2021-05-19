@@ -27,9 +27,9 @@ jobs:
 
   
       - name: setup Node.js 
-        run: actions/setup-node@v1.4.2
+        uses: actions/setup-node@v1.4.2
         with:
-          version: 12
+          node-version: 12
 
       
       - name: building project
