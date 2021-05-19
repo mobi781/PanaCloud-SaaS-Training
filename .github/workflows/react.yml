@@ -32,21 +32,21 @@ jobs:
           version: 12
 
       # Runs a set of commands using the runners shell
-      - name: yarn setup
-        uses: Borales/actions-yarn@2.1.0
-        with:
-          cmd: install
+      # - name: yarn setup
+      #   uses: Borales/actions-yarn@2.1.0
+      #   with:
+      #     cmd: install
           
           
           
-     - name: yarb build
-        run: yarn build
+     - name: building project
+        run: npm run build
           
      - name: install surge
         run: npm install --global surge
         
      - name: deploy project
-        run: surge ./build http://react-appasb.surge.sh/ --token ${{secrets.reactt}}
+        run: surge ./build http://react-appasb.surge.sh/ --token 'a068971a9d4396d6fbe36fa423825b3c'
 
           
           
