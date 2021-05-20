@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Parent from './Components/Parent';
 import './App.css';
+import Context from './Context/Context';
+
 
 function App() {
+  let count = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save it
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={count}>
+      <div className="App">
+        <Parent />
+
+
+      </div>
+    </Context.Provider>
   );
 }
 
