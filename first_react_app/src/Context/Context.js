@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 
 
-const Context = createContext();
+const Context = createContext(0);
 
 
 export default Context;
