@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Parent from './Components/Parent';
 import './App.css';
+import Context from './Context/Context';
+import Child from './Components/Child';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save it
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value="Sheroz">
+      <div className="App">
+        <Parent />
+        <Child />
+
+      </div>
+    </Context.Provider>
   );
 }
 
