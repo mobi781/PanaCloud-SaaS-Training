@@ -10,14 +10,14 @@ export const History = () => {
         <div>
             <h3>Transaction History</h3>
             <ul className="list">
-                {Description.map(Description => (
+                {Description.map((Description, index) => (
 
-                    <li className="plus">{Description.Desc} <span>{Description.Amount}</span> <button className="delete-btn">X</button></li>
+                    <li key={index} className={Description.Amount < 0 ? "minus" : "plus"}>{Description.Desc} <span>{Description.Amount < 0 ? "-" : ""}${Math.abs(Description.Amount)}</span> <button className="delete-btn">X</button></li>
                 ))
 
                 }
 
-                <li className="minus">Grocery <span>-$50</span> <button className="delete-btn">X</button></li>
+                {/* <li className="minus">Grocery <span>-$50</span> <button className="delete-btn">X</button></li> */}
             </ul>
 
         </div>

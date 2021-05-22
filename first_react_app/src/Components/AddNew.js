@@ -4,6 +4,7 @@ const AddNew = () => {
     let [Description, setDescription] = useState("");
     let [DescriptionAmount, setDescriptionAmount] = useState(0);
     console.log('Description,DescriptionAmount :>> ', Description, DescriptionAmount);
+
     return (
         <div>
             <h3>Add Transactions</h3>
