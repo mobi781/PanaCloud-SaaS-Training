@@ -2,12 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header'
 import Balance from './Components/Balance'
+import DetailsOfUsage from './Components/DetailsOfUsage'
+import { History } from './Components/History'
+import AddNew from './Components/AddNew'
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header />
-      <Balance />
+      <div className="container">
+        <Balance />
+        <DetailsOfUsage />
+        <History />
+        <AddNew />
+
+
+      </div>
     </div>
   );
 }
