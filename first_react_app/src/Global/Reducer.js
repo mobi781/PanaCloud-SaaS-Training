@@ -1,4 +1,4 @@
-const Reducer = (state, action) => {
+const Reducer = ((state, action) => {
     switch (action.type) {
         case "Add":
             return [state.payload, ...state];
@@ -7,5 +7,5 @@ const Reducer = (state, action) => {
 
     }
 
-}
+})
 export default Reducer;

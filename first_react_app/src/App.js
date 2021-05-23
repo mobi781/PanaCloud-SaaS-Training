@@ -5,11 +5,11 @@ import Balance from './Components/Balance'
 import DetailsOfUsage from './Components/DetailsOfUsage'
 import { History } from './Components/History'
 import AddNew from './Components/AddNew'
-import { GlobalP } from './Global/ContextApi'
+import { GlobalProvider } from './Global/ContextApi'
 
 function App() {
   return (
-    <GlobalP>
+    <GlobalProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -19,7 +19,7 @@ function App() {
 
 
       </div>
-    </GlobalP>
+    </GlobalProvider>
   );
 }
 
