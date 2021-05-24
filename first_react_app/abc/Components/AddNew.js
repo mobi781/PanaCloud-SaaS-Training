@@ -1,31 +1,35 @@
 import React, { useState, useContext } from 'react'
-import { Context, } from '../Global/ContextApi'
+import { Context } from '../Global/ContextApi'
 
 const AddNew = () => {
-    let { Addtransaction, Transactions } = useContext(Context);
+    const { addTransaction } = useContext(Context);
+    // let { Addtransaction, Transactions } = useContext(Context);
     let [Description, setDescription] = useState("");
-    let [DescriptionAmount, setDescriptionAmount] = useState(0);
-    function handleChange(event) {
+    let [DescriptionAmount, setDescriptionAmount] = useState();
+    const handleChange = (event) => {
         event.preventDefault();
-        Addtransaction({
+
+        const newTransaction = {
+            id: new Date().getTime(),
             Desc: Description,
-            Amount: DescriptionAmount
-        })
+            Amount: +DescriptionAmount
+        }
+        addTransaction(newTransaction);
     }
 
 
     return (
         <div>
             <h3>Add Transactions</h3>
-            <form className="form" onSubmit={handleChange}>
+            <form className="form" >
 
-                <label htmlFor="Description">
+                <label >
                     Description
 
 
                 </label>
                 <input
-
+                    // value={Description}
                     type="text"
                     placeholder="Plaese Enter the transation detail"
                     id="Description"
@@ -33,10 +37,11 @@ const AddNew = () => {
                 />
 
 
-                <label htmlFor="Description Amount">
+                <label >
                     Amount
                     </label>
                 <input
+                    // value={DescriptionAmount}
                     type="number"
                     placeholder="Plaese Enter the amount"
                     id="Description Amount"
@@ -45,7 +50,7 @@ const AddNew = () => {
                 />
 
 
-                <input className="btn" type="submit" value="ADD TRANSACTION" />
+                <button className="btn" type="submit" value="ADD TRANSACTION" onClick={handleChange}>ADD TRANSACTION</button>
             </form>
 
         </div>
